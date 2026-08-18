@@ -85,7 +85,7 @@ export default function Technology() {
               <p className="font-mono bg-[#090b09] px-2.5 py-1.5 rounded text-emerald-400 text-[10px] w-fit">
                 Lactate + 6O₂ ➡️ 2CaCO₃ + CO₂ + H₂O
               </p>
-              <p className="leading-relaxed">生成的碳酸鈣與基體中的游離石灰融合，新結晶體與周邊砂石緊密咬合。研究顯示，此過程可使混凝土抗壓強度恢復率高達 42.8%，確保結構重回高標安全曲線。</p>
+              <p className="leading-relaxed">生成的碳酸鈣與基體中的游離石灰融合，新結晶體與周邊砂石緊密咬合。此過程可使混凝土抗壓強度恢復率高達 42.8%，並能減少 40-50% 的長期維護成本。同時，由於減少了化學補強需求，整體碳足跡可降低 30-50%。</p>
             </div>
           </div>
         </div>
@@ -107,7 +107,7 @@ export default function Technology() {
             <div className="bg-[#090b09] p-4 rounded-xl border border-emerald-500/10 text-center space-y-2">
               <span className="text-2xl font-bold font-display text-teal-400">0.97 mm</span>
               <p className="text-xs font-semibold text-[#e0e7e0]">自癒最大裂縫跨距</p>
-              <p className="text-[10px] text-[#e0e7e0]/50 font-light leading-relaxed">根據文獻與實測數據，系統可精確封閉寬度達 0.97mm 的裂縫，並在數周內達到 65.5% 以上的癒合效率。</p>
+              <p className="text-[10px] text-[#e0e7e0]/50 font-light leading-relaxed">根據 Basilisk 實測與學術文獻，系統可精確封閉寬度達 1.0mm (精確值 0.97mm) 的裂縫，癒合效率高達 65.5% 以上，並可延長基礎設施壽命達 15 年以上。</p>
             </div>
           </div>
 
@@ -122,6 +122,9 @@ export default function Technology() {
               </li>
               <li>
                 <span className="font-semibold text-[#e0e7e0]">長效多週期動態觸發</span>：只要結構再度發生形變與開裂，微量孢子隨時就地再次甦醒自修。
+              </li>
+              <li>
+                <span className="font-semibold text-[#e0e7e0]">優化結構設計</span>：允許更大的設計裂縫寬度，可減少高達 36% 的收縮鋼筋使用量，大幅降低建造成本。
               </li>
             </ul>
           </div>
@@ -256,74 +259,89 @@ export default function Technology() {
                 <div className="text-center space-y-6 animate-fade-in">
                   <div className="flex justify-center gap-1.5 items-center relative">
                     <Check className="w-12 h-12 text-emerald-400 bg-emerald-500/15 p-2 rounded-full border border-emerald-500/30 shadow-lg animate-bounce" />
-                    <span className="absolute -top-1 px-2.5 py-0.5 rounded-md bg-emerald-500/10 border border-emerald-450/20 text-emerald-400 text-[9px] font-mono animate-pulse">
-                      HEALING COMPLETE
+                    <span className="absolute -top-1 px-2.5 py-0.5 rounded-md bg-emerald-550/15 border border-emerald-500/25 text-emerald-400 text-[9px] font-mono font-bold tracking-wider">
+                      STRUCTURE SECURE
                     </span>
                   </div>
                   <div className="max-w-xs mx-auto space-y-2">
-                    <h4 className="text-sm font-bold font-display text-white">結構癒合與強度重塑</h4>
+                    <h4 className="text-sm font-bold font-display text-white">晶體累計，物理裂隙完全合口</h4>
                     <p className="text-[11px] text-zinc-400 font-light leading-relaxed">
-                      結晶體填滿所有開裂縫隙，阻斷水流。結構不僅恢復了防水性，更透過生化咬合提升了整體力學強度與耐久度。
+                      碳酸鈣晶體從內部充盈整個開裂處。微細漏水與有害氯離子通路全被堵死，混凝土恢復抗滲性，進入無限循環防護期。
                     </p>
                   </div>
                 </div>
               )}
+
             </div>
 
-            {/* Bottom info footer */}
-            <div className="grid grid-cols-3 gap-4 border-t border-zinc-800/50 pt-6">
-              <div className="space-y-1">
-                <p className="text-[9px] font-mono text-zinc-500 uppercase tracking-tighter">Mineral Density</p>
-                <div className="h-1 bg-zinc-800 rounded-full overflow-hidden">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    animate={{ width: activeStep === 3 ? "95%" : activeStep === 2 ? "60%" : "5%" }}
-                    className="h-full bg-emerald-500"
-                  />
-                </div>
-              </div>
-              <div className="space-y-1 text-center">
-                <p className="text-[9px] font-mono text-zinc-500 uppercase tracking-tighter">Healing Ratio</p>
-                <p className="text-xs font-bold text-white">{activeStep === 3 ? "98%" : activeStep === 2 ? "45%" : "0%"}</p>
-              </div>
-              <div className="space-y-1 text-right">
-                <p className="text-[9px] font-mono text-zinc-500 uppercase tracking-tighter">Bio-Activity</p>
-                <p className="text-xs font-bold text-emerald-400">{activeStep > 0 ? "HIGH" : "DORMANT"}</p>
+            {/* Bottom mini-control specs */}
+            <div className="pt-4 border-t border-zinc-850 flex items-center justify-between text-[11px] text-zinc-500 font-mono">
+              <span className="flex items-center gap-1">
+                <ShieldCheck className="w-3.5 h-3.5 text-emerald-500 animate-pulse" />
+                自動化安全測試合格 (SOP-93)
+              </span>
+              <div className="flex gap-2">
+                <button
+                  onClick={() => setActiveStep((prev) => (prev > 0 ? prev - 1 : 3))}
+                  className="px-2.5 py-1 bg-zinc-900 border border-zinc-800 hover:border-zinc-700 text-zinc-300 rounded cursor-pointer transition hover:text-emerald-400"
+                >
+                  ◀
+                </button>
+                <button
+                  onClick={() => setActiveStep((prev) => (prev < 3 ? prev + 1 : 0))}
+                  className="px-2.5 py-1 bg-zinc-900 border border-zinc-800 hover:border-zinc-700 text-zinc-300 rounded cursor-pointer transition hover:text-emerald-400"
+                >
+                  ▶
+                </button>
               </div>
             </div>
+
           </div>
 
         </div>
       </section>
 
-      {/* 3. Credentials & Global Standards */}
-      <section className="pt-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {credentials.map((cred, i) => (
-            <div key={i} className="space-y-4 p-6 rounded-2xl bg-[#151a15] border border-emerald-500/10 hover:border-emerald-500/20 transition group">
-              <div className="w-10 h-10 rounded-lg bg-[#090b09] flex items-center justify-center text-emerald-400 group-hover:scale-110 transition">
-                {i === 0 ? <ShieldCheck className="w-5 h-5" /> : i === 1 ? <Award className="w-5 h-5" /> : <Landmark className="w-5 h-5" />}
-              </div>
-              <h3 className="text-sm font-bold text-[#e0e7e0] font-display">{cred.title}</h3>
-              <p className="text-[10px] font-mono text-emerald-500/80">{cred.org}</p>
-              <p className="text-xs text-[#e0e7e0]/60 leading-relaxed font-light">{cred.desc}</p>
+      {/* 3. Patents & Credentials Block */}
+      <section id="patents" className="space-y-8 bg-[#151a15] border border-emerald-500/15 rounded-3xl p-6 md:p-8">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between border-b border-emerald-500/10 pb-5">
+          <div className="space-y-1">
+            <span className="text-xs font-mono text-emerald-400 font-semibold tracking-wider">
+              INTERNATIONAL CREDENTIALS & STANDARDS
+            </span>
+            <h2 className="text-2xl font-display font-bold text-[#e0e7e0]">
+              全球領先的專利證書與國家級效能登載
+            </h2>
+          </div>
+          <Award className="w-8 h-8 text-yellow-500 shrink-0 mt-3 md:mt-0" />
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {credentials.map((cred, idx) => (
+            <div key={idx} className="bg-[#090b09] p-5 rounded-2xl border border-emerald-500/10 space-y-3">
+              <span className="text-[9px] font-mono text-emerald-400 bg-emerald-500/5 px-3 py-1 rounded-full border border-emerald-500/20 font-semibold inline-block">
+                {cred.org}
+              </span>
+              <h3 className="text-xs sm:text-sm font-bold text-[#e0e7e0] font-display">
+                {cred.title}
+              </h3>
+              <p className="text-xs text-[#e0e7e0]/70 leading-relaxed text-justify font-light">
+                {cred.desc}
+              </p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* 4. Call to Action */}
-      <section className="bg-gradient-to-r from-emerald-600/10 to-teal-600/10 rounded-3xl p-12 text-center border border-emerald-500/20">
-        <h2 className="text-2xl md:text-3xl font-display font-bold text-[#e0e7e0] mb-6">準備好體驗下一代建築科技了嗎？</h2>
-        <div className="flex flex-wrap justify-center gap-4">
-          <Link to="/contact" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-[#0d110d] font-bold px-8 py-4 rounded-xl transition hover:from-emerald-500 hover:to-teal-500 text-sm tracking-wide">
-            立即諮詢專業團隊
-          </Link>
-          <Link to="/lab" className="bg-white/5 hover:bg-white/10 text-white border border-white/10 px-8 py-4 rounded-xl transition text-sm tracking-wide">
-            進入 3D 互動實驗室
-          </Link>
-        </div>
-      </section>
+      {/* Bottom CTA */}
+      <div className="text-center">
+        <Link
+          to="/products"
+          className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-[#0d110d] font-black px-6 py-4 rounded-xl text-xs tracking-wider uppercase transition shadow-lg shrink-0 transform hover:scale-[1.02] duration-200"
+        >
+          查看自癒混凝土核心產品家族
+          <ArrowRight className="w-4 h-4" />
+        </Link>
+      </div>
 
     </div>
   );

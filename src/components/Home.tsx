@@ -8,21 +8,21 @@ export default function Home() {
   const { triggerScroll } = useScrollHighlight();
 
   const heroStats = [
-    { label: "二氧化碳排放量減少", val: "25%", color: "text-emerald-400" },
-    { label: "建築使用壽命延長", val: "30%+", color: "text-teal-400" },
-    { label: "修繕維護工期與費用降幅", val: "40%", color: "text-emerald-300" }
+    { label: "二氧化碳排放量減少", val: "30-50%", color: "text-emerald-400" },
+    { label: "建築使用壽命延長", val: "15年+", color: "text-teal-400" },
+    { label: "修繕維護費用降幅", val: "40-50%", color: "text-emerald-300" }
   ];
 
   const features = [
     {
       icon: <Recycle className="w-6 h-6 text-emerald-400" />,
       title: "自發性裂痕修復 (Bio-Healing)",
-      desc: "配方植入休眠細菌。一旦混凝土因應力或熱脹開裂使水分入侵，細菌即會甦醒，消耗水分並轉化為不溶性碳酸鈣結晶，自主黏合高達 1mm 大小的物理裂縫。"
+      desc: "配方植入休眠細菌。一旦混凝土因應力或熱脹開裂使水分入侵，細菌即會甦醒，消耗水分並轉化為不溶性碳酸鈣結晶。系統可精確封閉達 1.0mm 的裂縫，使混凝土強度恢復率高達 42.8%，並減少 30-50% 的碳足跡。"
     },
     {
       icon: <Shield className="w-6 h-6 text-teal-400" />,
       title: "鋼筋全面防鏽與防漏水",
-      desc: "裂痕於水分切入點第一時間自動縫合，有效抗滲防漏。阻斷氧氣、二氧化碳及氯離子等極致腐蝕因子滲透，保護鋼筋骨架免於嚴重鏽融，延長結構安全壽命。"
+      desc: "裂痕於水分切入點第一時間自動縫合，有效抗滲防漏。阻斷氧氣、二氧化碳及氯離子等腐蝕因子滲透。研究顯示可減少 40-50% 的長期維護成本，並可節省高達 36% 的收縮鋼筋使用量。"
     },
     {
       icon: <HeartPulse className="w-6 h-6 text-emerald-300" />,
